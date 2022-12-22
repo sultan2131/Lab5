@@ -3,9 +3,9 @@ using namespace std;
 int main()
 {
 	short array[] = {30, 50, 20, 10, 40, 60};
-	int n1, n2;
-	int amout = sizeof(array) / sizeof(*array);
-	bool exist1, exist2 = false;
+	int *n1 = new int, *n2 = new int;
+	int amout = sizeof(array);
+	bool exist1 = false, exist2 = false;
 
 	cout << "input first number: ";
 	cin >> n1;
@@ -14,7 +14,7 @@ int main()
 	cout << "-----------------" << "\n";
 
 
-	for (int i = 1; i < amout-1; i++) {
+	for (int i = 0; i < amout; i++) {
 		if (array[i] == n1){
 			cout << n1 << " number in array" << "\nadress: " << &n1 << "\n\n";
 			exist1=true;
@@ -24,7 +24,7 @@ int main()
 			exist2=true;
 		}
 		else{
-			int exist1, exist2=0;
+			 exist1=true;
 		}
 	if (exist1==true && exist2==true){
 		cout << "2 numbers in array" << "\n\n";
@@ -32,9 +32,10 @@ int main()
 	if (exist1!=exist2){
 		cout << "1 number in array" << "\n\n";
 	}
-	if (exist1==0 && exist2==0){
+	if (exist1==true && exist2==false){
 		cout << "0 number in array" << "\n\n";
 	}
 	}
+	delet n1, n2;
 	return 0;
 }
