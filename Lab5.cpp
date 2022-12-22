@@ -2,7 +2,7 @@
 using namespace std;
 int main()
 {
-	short array[] = {30, 50, 20, 10, 40, 60};
+	int array[] = {30, 50, 20, 10, 40, 60};
 	int *n1 = new int, *n2 = new int;
 	int amout = sizeof(array);
 	bool exist1 = false, exist2 = false;
